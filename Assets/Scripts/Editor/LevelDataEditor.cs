@@ -40,5 +40,32 @@ namespace Editor {
                 GUILayout.EndHorizontal();
             }
         }
+        private LevelSlot FindLevelSlot(List<LevelSlot> slots, int x, int y)
+        {
+            LevelSlot slot = slots.Find(i => i.Coordinates.x == x &&
+                                             i.Coordinates.y == y);
+            if(slot == null)
+            {
+                slot = new LevelSlot(LevelItemType.None, new Vector2Int(x, y));
+                slots.Add(slot);
+            }
+            return slot;
+        }
+        private void AddButtonInitialize(LevelData levelData)
+        {
+            if (GUILayout.Button("Initialize"))
+            {
+                Initialize(levelData);
+            }
+        }
+        private void AddButtonUpdate(LevelData levelData)
+        {
+            if (GUILayout.Button("Update"))
+            {
+                EditorUtility.SetDirty(levelData);
+                AssetDatabase.SaveAssets();
+                AssetDatabase.Refresh();
+            }
+        }
     }
 }

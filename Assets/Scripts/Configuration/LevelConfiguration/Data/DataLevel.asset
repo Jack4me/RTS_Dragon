@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: DataLevel
   m_EditorClassIdentifier: 
   Slots: []
-  Columns: 0
-  Rows: 0
-  Configuration: {fileID: 0}
+  Columns: 3
+  Rows: 3
+  Configuration: {fileID: 11400000, guid: 1cad78adab590cf48ad384787cce85c4, type: 2}
