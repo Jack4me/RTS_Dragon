@@ -1,0 +1,44 @@
+using System.Collections.Generic;
+using Configuration;
+using UnityEditor;
+using UnityEngine;
+using Configuration.LevelConfiguration;
+
+namespace Editor {
+    [CustomEditor(typeof(LevelData))]
+    public class LevelDataEditor : UnityEditor.Editor {
+        public override void OnInspectorGUI() {
+            LevelData levelData = (LevelData)target;
+            AddLevelDetails(levelData);
+            AddLevelSlots(levelData);
+            AddButtonInitialize(levelData);
+            AddButtonUpdate(levelData);
+        }
+        private void AddLevelDetails(LevelData levelData)
+        {
+            levelData.Configuration = EditorGUILayout.ObjectField("Level: ",
+                levelData.Configuration,
+                typeof(LevelConfiguration), false) as LevelConfiguration;
+            levelData.Columns = EditorGUILayout.IntSlider("Columns: ",
+                levelData.Columns, 1, 25);
+            levelData.Rows = EditorGUILayout.IntSlider("Rows: ",
+                levelData.Rows, 1, 25);
+        }
+        private void AddLevelSlots(LevelData levelData)
+        {
+            
+            EditorGUILayout.LabelField("Level Item per position:");
+            for (int x = 0; x < levelData.Rows; x++)
+            {
+                GUILayout.BeginHorizontal();
+                for (int y = 0; y < levelData.Columns; y++)
+                {
+                    LevelSlot slot = FindLevelSlot(levelData.Slots, x, y);
+                    slot.ItemType = (LevelItemType)EditorGUILayout.EnumPopup(
+                            slot.ItemType);
+                }
+                GUILayout.EndHorizontal();
+            }
+        }
+    }
+}
