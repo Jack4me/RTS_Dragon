@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Configuration.LevelConfiguration {
     [Serializable]
-    public class LevelSlot : MonoBehaviour {
+    public class LevelSlot  {
         public LevelItemType ItemType;
         public Vector2Int Coordinates;
 
