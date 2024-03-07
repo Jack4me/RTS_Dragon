@@ -7,6 +7,6 @@ namespace Configuration.LevelConfiguration {
         public List<LevelSlot> Slots = new List<LevelSlot>();
         public int Columns;
         public int Rows;
-        public global::LevelConfiguration Configuration;
+        public LevelConfiguration Configuration;
     }
 }
