@@ -1,7 +1,8 @@
 using System.Collections.Generic;
+using Configuration;
 using UnityEngine;
 
-namespace Configuration.LevelConfiguration {
+namespace Level {
     [CreateAssetMenu(menuName = "Dragoncraft/New Configuration")]
     public class LevelConfiguration : ScriptableObject {
         public List<LevelItem> LevelItems = new List<LevelItem>();

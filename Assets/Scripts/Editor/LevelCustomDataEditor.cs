@@ -3,10 +3,12 @@ using Configuration;
 using UnityEditor;
 using UnityEngine;
 using Configuration.LevelConfiguration;
+using Configuration.LevelConfiguration.Data;
+using Level;
 
 namespace Editor {
     [CustomEditor(typeof(LevelData))]
-    public class LevelDataEditor : UnityEditor.Editor {
+    public class LevelCustomDataEditor : UnityEditor.Editor {
         public override void OnInspectorGUI() {
             LevelData levelData = (LevelData)target;
             AddLevelDetails(levelData);

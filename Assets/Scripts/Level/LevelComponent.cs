@@ -1,4 +1,6 @@
+using Configuration;
 using Configuration.LevelConfiguration;
+using Configuration.LevelConfiguration.Data;
 using UnityEngine;
 
 namespace Level {

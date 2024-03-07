@@ -1,7 +1,8 @@
 using System;
+using Configuration;
 using UnityEngine;
 
-namespace Configuration.LevelConfiguration {
+namespace Level {
     [Serializable]
     public class LevelSlot  {
         public LevelItemType ItemType;
