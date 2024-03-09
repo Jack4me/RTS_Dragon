@@ -2,8 +2,7 @@ using System.Collections.Generic;
 using Configuration;
 using UnityEditor;
 using UnityEngine;
-using Configuration.LevelConfiguration;
-using Configuration.LevelConfiguration.Data;
+using Configuration.LevelConfigurations.Data;
 using Level;
 
 namespace Editor {

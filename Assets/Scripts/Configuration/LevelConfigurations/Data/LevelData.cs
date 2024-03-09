@@ -2,12 +2,12 @@ using System.Collections.Generic;
 using Level;
 using UnityEngine;
 
-namespace Configuration.LevelConfiguration.Data {
+namespace Configuration.LevelConfigurations.Data {
     [CreateAssetMenu(menuName = "Dragoncraft/New Level")]
     public class LevelData : ScriptableObject {
-        public List<LevelSlot> Slots = new List<LevelSlot>();
+        public List<LevelSlot> Slots = new ();
         public int Columns;
         public int Rows;
-        public global::Level.LevelConfiguration Configuration;
+        public LevelConfiguration Configuration;
     }
 }

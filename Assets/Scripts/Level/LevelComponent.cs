@@ -1,6 +1,5 @@
 using Configuration;
-using Configuration.LevelConfiguration;
-using Configuration.LevelConfiguration.Data;
+using Configuration.LevelConfigurations.Data;
 using UnityEngine;
 
 namespace Level {
@@ -33,7 +32,8 @@ namespace Level {
                     continue;
                 }
 
-                float x = start.x + (slot.Coordinates.y * offsetX) +
+                float coordinatesY = slot.Coordinates.y * offsetX;
+                float x = start.x + coordinatesY +
                           offsetX / 2;
                 float z = start.z - (slot.Coordinates.x * offsetZ) -
                           offsetZ / 2;
