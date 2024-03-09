@@ -21,8 +21,7 @@ namespace Level {
             float offsetX = planeSize.x / _levelData.Columns - 1;
             Debug.Log(startPosition);       
             float offsetZ = planeSize.z / _levelData.Rows - 1;
-            Debug.Log(offsetX);
-            Debug.Log(offsetZ);
+           
             Initialize(startPosition, offsetX, offsetZ);    
         }
 
