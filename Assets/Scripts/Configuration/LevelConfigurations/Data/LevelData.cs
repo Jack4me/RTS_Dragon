@@ -3,7 +3,7 @@ using Level;
 using UnityEngine;
 
 namespace Configuration.LevelConfigurations.Data {
-    [CreateAssetMenu(menuName = "Dragoncraft/New Level")]
+    [CreateAssetMenu(menuName = "DragonCraft/New Level")]
     public class LevelData : ScriptableObject {
         public List<LevelSlot> Slots = new ();
         public int Columns;

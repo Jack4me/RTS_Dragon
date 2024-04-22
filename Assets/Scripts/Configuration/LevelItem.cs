@@ -7,5 +7,6 @@ namespace Configuration {
     {
         public LevelItemType Type;
         public GameObject Prefab;
+        public LevelItemCollistionType CollistionType;
     }
 }

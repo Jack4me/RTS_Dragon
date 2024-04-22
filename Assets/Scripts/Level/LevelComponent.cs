@@ -1,11 +1,24 @@
+using System;
 using Configuration;
 using Configuration.LevelConfigurations.Data;
 using UnityEngine;
+using UnityEngine.AI;
 
 namespace Level {
     public class LevelComponent : MonoBehaviour {
         [SerializeField] private LevelData _levelData;
         [SerializeField] private GameObject _plane;
+
+        public delegate void Delegat();
+
+        private void Awake() {
+            Delegat d = delegate { Debug.Log("DELEGAGE"); };
+            DelegatMethod(d);
+        }
+
+        public void DelegatMethod(Delegat deleg) {
+            deleg();
+        }
 
         private void Start() {
             if (_levelData == null || _plane == null) {
@@ -18,10 +31,10 @@ namespace Level {
             Vector3 startPosition = new Vector3(-planeSize.x / 2, 0,
                 planeSize.z / 2);
             float offsetX = planeSize.x / _levelData.Columns - 1;
-            Debug.Log(startPosition);       
+            Debug.Log(startPosition);
             float offsetZ = planeSize.z / _levelData.Rows - 1;
-           
-            Initialize(startPosition, offsetX, offsetZ);    
+
+            Initialize(startPosition, offsetX, offsetZ);
         }
 
         private void Initialize(Vector3 start, float offsetX, float offsetZ) {
@@ -40,6 +53,19 @@ namespace Level {
                 Vector3 position = new Vector3(x, 0, z);
                 Instantiate(levelItem.Prefab, position, Quaternion.identity,
                     transform);
+                GameObject item = Instantiate(levelItem.Prefab,
+                    position, Quaternion.identity, transform);
+                switch (levelItem.CollistionType) {
+                    case LevelItemCollistionType.Rigidbody:
+                        item.AddComponent<BoxCollider>();
+                        break;
+                    case LevelItemCollistionType.NavMesh:
+                        item.AddComponent<NavMeshObstacle>();
+                        break;
+                    case LevelItemCollistionType.None:
+                    default:
+                        break;
+                }
             }
         }
     }

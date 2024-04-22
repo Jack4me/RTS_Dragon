@@ -12,24 +12,29 @@ namespace Camera {
         [SerializeField] private float _scrollSpeed = 1000f;
 
         [SerializeField] private Vector2 _scrollLimit =
-            new Vector2(5f, 10f);
+            new Vector2(5f, 30f);
+
+        [SerializeField] private bool _disableCameraMovement = false;
 
         private Vector3 _initialPosition = Vector3.zero;
         private UnityEngine.Camera _camera = null;
-        private void Start()
-        {
+
+        private void Start() {
             _initialPosition = transform.position;
             _camera = GetComponent<UnityEngine.Camera>();
         }
 
-        private void Update()
-        {
+        private void Update() {
+#if UNITY_EDITOR
+            if (_disableCameraMovement) {
+                return;
+            }
+#endif
             UpdateZoom();
             UpdatePan();
         }
 
-        private void UpdateZoom()
-        {
+        private void UpdateZoom() {
             float scroll = Input.GetAxis("Mouse ScrollWheel");
             scroll = scroll * _scrollSpeed * Time.deltaTime;
             _camera.orthographicSize += scroll;
@@ -37,10 +42,7 @@ namespace Camera {
                 _scrollLimit.x, _scrollLimit.y);
         }
 
-        private void UpdatePan()
-        {
-            Debug.Log(Screen.height +"H");
-            Debug.Log(Screen.width + "W");
+        private void UpdatePan() {
             Vector3 position = transform.position;
             if (Input.mousePosition.y >= Screen.height - _borderSize)
                 position.z += _panSpeed * Time.deltaTime;
