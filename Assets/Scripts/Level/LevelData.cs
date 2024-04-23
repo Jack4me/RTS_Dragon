@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Enemy;
 using UnityEngine;
 
 namespace Level {
@@ -8,5 +9,6 @@ namespace Level {
         public int Columns;
         public int Rows;
         public Configuration.LevelConfigurations.Data.LevelConfiguration Configuration;
+        public List<EnemyGroupConfiguration> EnemyGroups = new List<EnemyGroupConfiguration>();
     }
 }

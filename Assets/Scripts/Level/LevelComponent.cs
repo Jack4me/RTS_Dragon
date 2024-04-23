@@ -1,6 +1,9 @@
 using System;
 using Configuration;
 using Configuration.LevelConfigurations.Data;
+using Enemy;
+using MessageQueue;
+using MessageQueue.Message.Enemy;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -10,6 +13,8 @@ namespace Level {
         [SerializeField] private GameObject _plane;
 
         public delegate void Delegat();
+
+        private float _distanceBetweenEnemies = 3.0f;
 
         private void Awake() {
             Delegat d = delegate { Debug.Log("DELEGAGE"); };
@@ -35,6 +40,55 @@ namespace Level {
             float offsetZ = planeSize.z / _levelData.Rows - 1;
 
             Initialize(startPosition, offsetX, offsetZ);
+            SpawnEnemyGroups();
+        }
+
+        private void SpawnEnemyGroups() {
+            foreach (EnemyGroupConfiguration group in _levelData.EnemyGroups) {
+                SpawnEnemyGroup(group);
+            }
+        }
+
+        private void SpawnEnemyGroup(EnemyGroupConfiguration enemyGroup) {
+            int rows = Mathf.RoundToInt(Mathf.Sqrt(enemyGroup.Data.Enemies.Count));
+            int counter = 0;
+            for (int i = 0; i < enemyGroup.Data.Enemies.Count; i++) {
+                if (i > 0 && (i % rows) == 0) {
+                    counter++;
+                }
+
+                float offsetX = (i % rows) * _distanceBetweenEnemies;
+                float offsetZ = counter * _distanceBetweenEnemies;
+                Vector3 offset = new Vector3(offsetX, 0, offsetZ);
+                Vector3 spawnPoint = enemyGroup.Position + offset;
+                SpawnEnemy(enemyGroup.Data.Enemies[i].Type,
+                    spawnPoint);
+            }
+        }
+
+        private void SpawnEnemy(EnemyType enemyType, Vector3 spawnPoint) {
+            switch (enemyType) {
+                case EnemyType.Orc:
+                    MessageQueueManager.Instance.SendMessage(new BasicOrcSpawnMessage
+                        {
+                            SpawnPoint = spawnPoint
+                        });
+                    break;
+                case EnemyType.Golem:
+                    MessageQueueManager.Instance.SendMessage(new BasicGolemSpawnMessage
+                        {
+                            SpawnPoint = spawnPoint
+                        });
+                    break;
+                case EnemyType.Dragon:
+                    MessageQueueManager.Instance.SendMessage(new RedDragonSpawnMessage
+                        {
+                            SpawnPoint = spawnPoint
+                        });
+                    break;
+                default:
+                    break;
+            }
         }
 
         private void Initialize(Vector3 start, float offsetX, float offsetZ) {

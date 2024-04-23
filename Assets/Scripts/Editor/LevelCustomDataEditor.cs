@@ -39,6 +39,9 @@ namespace Editor {
 
                 GUILayout.EndHorizontal();
             }
+            SerializedProperty enemyGroups = serializedObject.FindProperty("EnemyGroups");
+            EditorGUILayout.PropertyField(enemyGroups,new GUIContent("Enemy Groups"), true);
+            serializedObject.ApplyModifiedProperties();
         }
 
         private LevelSlot FindLevelSlot(List<LevelSlot> slots, int x, int y) {
