@@ -4,6 +4,7 @@ using UnityEditor;
 using UnityEngine;
 using Configuration.LevelConfigurations.Data;
 using Level;
+using LevelConfiguration = Configuration.LevelConfigurations.Data.LevelConfiguration;
 
 namespace Editor {
     [CustomEditor(typeof(LevelData))]
