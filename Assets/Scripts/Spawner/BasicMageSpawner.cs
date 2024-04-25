@@ -1,4 +1,5 @@
 using Extension;
+using Level;
 using MessageQueue;
 using MessageQueue.Message.Unit;
 using Unit;
@@ -25,6 +26,7 @@ namespace Spawner {
             }
 
             unit.CopyData(_unitData);
+            LevelManager.Instance.Units.Add(mage);
         }
     }
 }

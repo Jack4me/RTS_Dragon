@@ -1,5 +1,6 @@
 using System;
 using Extension;
+using Level;
 using MessageQueue;
 using MessageQueue.Message.Unit;
 using Unit;
@@ -42,6 +43,7 @@ namespace Spawner {
             }
             
             unitComponent.CopyData(_unitData);
+            LevelManager.Instance.Units.Add(warrior);
         }
     }
 }

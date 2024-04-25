@@ -225,6 +225,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1163548242918138140, guid: 8c6c30893a353b34095589f8e283299c, type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4569708149149134336, guid: 8c6c30893a353b34095589f8e283299c, type: 3}
       propertyPath: m_Name
       value: Main Camera 1
@@ -310,6 +314,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 901361546288810642, guid: 13f20e0aa801b4742b8b5959dc9b9220, type: 3}
+      propertyPath: m_NavMeshData
+      value: 
+      objectReference: {fileID: 23800000, guid: 86a8964efa02dca45acd0037cb092db8, type: 2}
     - target: {fileID: 1961809559597166290, guid: 13f20e0aa801b4742b8b5959dc9b9220, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
