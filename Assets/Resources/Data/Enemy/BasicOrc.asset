@@ -24,8 +24,8 @@ MonoBehaviour:
   AnimationStateDefense: Victory
   AnimationStateMove: Run
   AnimationStateIdle: Idle
-  AnimationStateCollect: 
-  AnimationStateDeath: Die
+  AnimationStateCollect: GetHit
+  AnimationStateDeath: Death
   AttackRange: 2.52
   ColliderSize: 1.5
   Type: 0

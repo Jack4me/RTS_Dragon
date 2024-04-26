@@ -18,12 +18,12 @@ MonoBehaviour:
   WalkSpeed: 2
   AttackSpeed: 2
   SelectedColor: {r: 0.93106323, g: 0.084549636, b: 0.9433962, a: 0}
-  OriginalColor: {r: 0.20000002, g: 0.20000002, b: 0.20000002, a: 0}
-  AnimationStateAttack01: Atack01
-  AnimationStateAttack02: Atack02
-  AnimationStateDefense: Defend
-  AnimationStateMove: Run
-  AnimationStateIdle: Idle
+  OriginalColor: {r: 1, g: 1, b: 1, a: 0}
+  AnimationStateAttack01: attack01
+  AnimationStateAttack02: attack02
+  AnimationStateDefense: victory
+  AnimationStateMove: run
+  AnimationStateIdle: idle
   AnimationStateCollect: GetHit
   AnimationStateDeath: die
   AttackRange: 8

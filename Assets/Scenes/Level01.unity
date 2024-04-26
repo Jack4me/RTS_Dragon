@@ -145,7 +145,7 @@ MonoBehaviour:
   _panLimit: {x: 30, y: 35}
   _scrollSpeed: 1000
   _scrollLimit: {x: 5, y: 30}
-  _disableCameraMovement: 0
+  _disableCameraMovement: 1
 --- !u!1001 &813144802
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -193,6 +193,10 @@ PrefabInstance:
     - target: {fileID: 82215152081075753, guid: 20a44290a67651b408dfc0616015e0b9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 229214988133829412, guid: 20a44290a67651b408dfc0616015e0b9, type: 3}
+      propertyPath: orthographic size
+      value: 9.16
       objectReference: {fileID: 0}
     - target: {fileID: 1101493001255498418, guid: 20a44290a67651b408dfc0616015e0b9, type: 3}
       propertyPath: m_Name

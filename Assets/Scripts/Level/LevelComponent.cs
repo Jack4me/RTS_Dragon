@@ -61,8 +61,7 @@ namespace Level {
                 float offsetZ = counter * _distanceBetweenEnemies;
                 Vector3 offset = new Vector3(offsetX, 0, offsetZ);
                 Vector3 spawnPoint = enemyGroup.Position + offset;
-                SpawnEnemy(enemyGroup.Data.Enemies[i].Type,
-                    spawnPoint);
+                SpawnEnemy(enemyGroup.Data.Enemies[i].Type, spawnPoint);
             }
         }
 

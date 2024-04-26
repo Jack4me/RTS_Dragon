@@ -10,7 +10,7 @@ namespace Character {
         public Color SelectedColor;
         private Renderer _renderer;
         private Color _originalColor;
-        private Color _emissionColor;
+       private Color _emissionColor;
         private ActionType _action;
 
         private void Awake() {
