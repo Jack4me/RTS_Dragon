@@ -35,7 +35,6 @@ namespace MessageQueue {
                 listeners.Remove(listener);
             }
         }
-        //какие методы перебираем в цикле for ? 
         public void SendMessage(IMessage message) {
             if (_listeners.TryGetValue(message.GetType(), out List<Delegate> listeners)) {
                 for (int i = 0; i < listeners.Count; i++) {
