@@ -1,3 +1,4 @@
+using Level;
 using MessageQueue;
 using MessageQueue.Message.UI;
 using TMPro;
@@ -29,13 +30,13 @@ namespace UI {
 
         private void OnResourceUpdated(UpdateResourceMessage message) {
             if (_type == message.Type) {
-                _currentValue += message.Amount;
+                LevelManager.Instance.UpdateResource(_type, message.Amount);
                 UpdateValue();
             }
         }
 
         private void UpdateValue() {
-            _value.text = $"{_type}: {_currentValue}";
+            _value.text = $"{_type}: {LevelManager.Instance.GetResource(_type)}";
         }
     }
 }
