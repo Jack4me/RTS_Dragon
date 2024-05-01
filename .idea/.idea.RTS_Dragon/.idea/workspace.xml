@@ -45,6 +45,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MessageQueue/Message/UI/UpdateActionsMessage.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MessageQueue/Message/UI/UpdateDetailsMessage.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MessageQueue/Message/UI/UpdateResourceMessage.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MessageQueue/Message/UI/UpgradeResourceMessage.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MessageQueue/Message/Unit/BasicMageSpawnMessage.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MessageQueue/Message/Unit/BasicWarriorSpawnMessage.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MessageQueue/MessageQueueManager.cs" root0="FORCE_HIGHLIGHTING" />
@@ -183,6 +184,7 @@
       <workItem from="1714116622003" duration="206000" />
       <workItem from="1714116846623" duration="9298000" />
       <workItem from="1714215750995" duration="2236000" />
+      <workItem from="1714551664042" duration="981000" />
     </task>
     <servers />
   </component>
