@@ -13,7 +13,7 @@ namespace Level {
 
         private void Awake() {
             if (Instance != null && Instance != this) {
-                Destroy(this);
+                Destroy(this);  
                 return;
             }
 

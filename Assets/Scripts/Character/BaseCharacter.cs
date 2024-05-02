@@ -21,10 +21,12 @@ namespace Character {
         public Color SelectedColor;
         public float AttackRange;
         public float ColliderSize;
+
         public bool IsDead { get; private set; }
-      //  private VisualCharacter _visualCharacter;
+
+        //  private VisualCharacter _visualCharacter;
         private void Awake() {
-          //  _visualCharacter = GetComponent<VisualCharacter>();
+            //  _visualCharacter = GetComponent<VisualCharacter>();
             _renderer = GetComponentInChildren<Renderer>();
             _animator = GetComponent<Animator>();
             _originalColor = _renderer.material.color;
@@ -86,7 +88,9 @@ namespace Character {
                 transform.position.y + _renderer.bounds.size.y / 2,
                 transform.position.z);
         }
+
+        public ActionType GetActionType() {
+            return _action;
+        }
     }
 }
-
-
