@@ -33,6 +33,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Extension/GameObjectExtension.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/InventoryData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/InventoryManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Level/DragAndDropComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Level/FogComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Level/LevelComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Level/LevelConfiguration.cs" root0="FORCE_HIGHLIGHTING" />
@@ -190,7 +191,7 @@
       <workItem from="1714215750995" duration="2236000" />
       <workItem from="1714551664042" duration="10143000" />
       <workItem from="1714647855536" duration="2397000" />
-      <workItem from="1714811061701" duration="2497000" />
+      <workItem from="1714811061701" duration="6280000" />
     </task>
     <servers />
   </component>
