@@ -73,10 +73,12 @@ namespace Level {
         private RaycastHit GetRaycastHit() {
             Vector3 worldMousePositionMax = UnityEngine.Camera.main.ScreenToWorldPoint(
                 new Vector3(Input.mousePosition.x, Input.mousePosition.y, UnityEngine.Camera.main.farClipPlane));
-            Vector3 worldMousePositionMin =
-                UnityEngine.Camera.main.ScreenToWorldPoint(
+           
+            Vector3 worldMousePositionMin = UnityEngine.Camera.main.ScreenToWorldPoint(
                     new Vector3(Input.mousePosition.x, Input.mousePosition.y, UnityEngine.Camera.main.nearClipPlane));
+           
             RaycastHit hit;
+           
             Physics.Raycast(worldMousePositionMin, worldMousePositionMax - worldMousePositionMin, out hit,
                 1000, _layerMask);
             return hit;

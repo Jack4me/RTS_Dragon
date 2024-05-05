@@ -60,6 +60,8 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Spawner/BasicWarriorSpawner.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Spawner/Enemy/EnemySpawner.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Spawner/FireballSpawner.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Store/ResourceStoreItem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Store/StoreItem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Tests/BaseTest.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Tests/UnitDataTest.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/ButtonComponent.cs" root0="FORCE_HIGHLIGHTING" />
@@ -192,7 +194,7 @@
       <workItem from="1714551664042" duration="10143000" />
       <workItem from="1714647855536" duration="2397000" />
       <workItem from="1714811061701" duration="6280000" />
-      <workItem from="1714894103595" duration="3577000" />
+      <workItem from="1714894103595" duration="5719000" />
     </task>
     <servers />
   </component>
