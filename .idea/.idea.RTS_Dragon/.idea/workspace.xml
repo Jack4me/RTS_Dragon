@@ -63,6 +63,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Store/ResourceStoreData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Store/ResourceStoreItem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Store/StoreItem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Store/StoreItemComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Tests/BaseTest.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Tests/UnitDataTest.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/ButtonComponent.cs" root0="FORCE_HIGHLIGHTING" />
@@ -196,6 +197,9 @@
       <workItem from="1714647855536" duration="2397000" />
       <workItem from="1714811061701" duration="6280000" />
       <workItem from="1714894103595" duration="7048000" />
+      <workItem from="1715086247546" duration="601000" />
+      <workItem from="1715177521873" duration="598000" />
+      <workItem from="1715241022588" duration="7094000" />
     </task>
     <servers />
   </component>
