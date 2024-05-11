@@ -86,10 +86,18 @@ namespace Unit {
 
         private void OnEnable() {
             MessageQueueManager.Instance.AddListener<ActionCommandMessage>(OnActionCommandReceived);
+            MessageQueueManager.Instance.AddListener<UpgradeUnitMessage>(OnUnitUpgradeReceived);
+        }
+
+        private void OnUnitUpgradeReceived(UpgradeUnitMessage message) {
+            if (Type == message.Type) {
+                Level++;
+            }
         }
 
         private void OnDisable() {
             MessageQueueManager.Instance.RemoveListener<ActionCommandMessage>(OnActionCommandReceived);
+            MessageQueueManager.Instance.RemoveListener<UpgradeUnitMessage>(OnUnitUpgradeReceived);
         }
 
         private void Awake() {
@@ -139,17 +147,15 @@ namespace Unit {
             }
         }
 
-       
-        protected override void UpdateState(ActionType action)
-        {
+
+        protected override void UpdateState(ActionType action) {
             base.UpdateState(action);
-            switch (action)
-            {
+            switch (action) {
                 case ActionType.Attack:
                     EnableMovement(false);
-                    UnitAnimationState attackState = (UnityEngine.Random.value < 0.5f) ?
-                            UnitAnimationState.Attack01 :
-                            UnitAnimationState.Attack02;
+                    UnitAnimationState attackState = (UnityEngine.Random.value < 0.5f)
+                        ? UnitAnimationState.Attack01
+                        : UnitAnimationState.Attack02;
                     PlayAnimation(attackState);
                     break;
                 case ActionType.Move:

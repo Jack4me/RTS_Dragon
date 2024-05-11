@@ -1,4 +1,5 @@
-﻿using ObjectPool;
+﻿using System.Collections.Generic;
+using ObjectPool;
 using TMPro;
 using UnityEngine;
 
@@ -8,6 +9,8 @@ namespace Store {
         [SerializeField] private TMP_Text _errorMessage;
         [SerializeField] private ObjectPoolComponent _objectPool;
         [SerializeField] private GameObject _content;
+        [SerializeField] private UnitStoreData _unitStoreData;
+        [SerializeField] private List<StoreItemComponent> _storeItems = new List<StoreItemComponent>();
 
         private void OnEnable() {
             if (_resourceStoreData != null) {
@@ -16,6 +19,14 @@ namespace Store {
                         _resourceStoreData.Items[i]);
                 }
             }
+
+            if (_unitStoreData != null) {
+                for (int i = 0; i < _unitStoreData.Items.Count; i++) {
+                    InitializeStoreItem(_objectPool.GetObject(),
+                        _unitStoreData.Items[i]);
+                }
+            }
+
             _errorMessage.text = string.Empty;
         }
 

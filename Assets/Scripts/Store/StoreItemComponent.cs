@@ -2,7 +2,9 @@ using System;
 using Level;
 using MessageQueue;
 using MessageQueue.Message.UI;
+using MessageQueue.Message.Unit;
 using TMPro;
+using Unit;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -43,11 +45,42 @@ namespace Store {
             _callback(true, null);
         }
 
-        private void UpgradeResource() {
-            if (_storeItem.GetType() != typeof(ResourceStoreItem))
-            {
+        private void SpawnUnit() {
+            if (_storeItem.GetType() != typeof(UnitStoreItem)) {
                 return;
             }
+
+            UnitStoreItem item = (UnitStoreItem)_storeItem;
+            if (item.IsUpgrade) {
+                return;
+            }
+
+            if (item.Unit == UnitType.Warrior) {
+                MessageQueueManager.Instance.SendMessage(new BasicWarriorSpawnMessage());
+            }
+            else if (item.Unit == UnitType.Mage) {
+                MessageQueueManager.Instance.SendMessage(new BasicMageSpawnMessage());
+            }
+        }
+
+        private void UpgradeUnit() {
+            if (_storeItem.GetType() != typeof(UnitStoreItem)) {
+                return;
+            }
+
+            UnitStoreItem item = (UnitStoreItem)_storeItem;
+            if (!item.IsUpgrade) {
+                return;
+            }
+
+            MessageQueueManager.Instance.SendMessage(new UpgradeUnitMessage { Type = item.Unit });
+        }
+
+        private void UpgradeResource() {
+            if (_storeItem.GetType() != typeof(ResourceStoreItem)) {
+                return;
+            }
+
             ResourceStoreItem item = (ResourceStoreItem)_storeItem;
             MessageQueueManager.Instance.SendMessage(new UpgradeResourceMessage { Type = item.Resource });
             LevelManager.Instance.AddBuilding(item.Prefab);
