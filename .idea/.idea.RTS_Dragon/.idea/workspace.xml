@@ -51,6 +51,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MessageQueue/Message/UI/UpdateDetailsMessage.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MessageQueue/Message/UI/UpdateResourceMessage.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MessageQueue/Message/UI/UpgradeResourceMessage.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MessageQueue/Message/UI/UpgradeUnitMessage.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MessageQueue/Message/Unit/BasicMageSpawnMessage.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MessageQueue/Message/Unit/BasicWarriorSpawnMessage.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MessageQueue/MessageQueueManager.cs" root0="FORCE_HIGHLIGHTING" />
@@ -65,6 +66,8 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Store/ResourceStoreItem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Store/StoreItem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Store/StoreItemComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Store/UnitStoreData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Store/UnitStoreItem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Tests/BaseTest.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Tests/UnitDataTest.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/ButtonComponent.cs" root0="FORCE_HIGHLIGHTING" />
@@ -201,7 +204,8 @@
       <workItem from="1715086247546" duration="601000" />
       <workItem from="1715177521873" duration="598000" />
       <workItem from="1715241022588" duration="7094000" />
-      <workItem from="1715325227878" duration="3465000" />
+      <workItem from="1715325227878" duration="4238000" />
+      <workItem from="1715414298271" duration="4132000" />
     </task>
     <servers />
   </component>

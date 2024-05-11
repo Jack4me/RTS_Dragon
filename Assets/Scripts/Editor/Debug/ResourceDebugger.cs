@@ -24,6 +24,16 @@ namespace Editor.Debug {
                     Amount = -10
                 });
         }
+        
+        [MenuItem("Dragoncraft/Debug/Resources/+100 Wood", priority = 3)]
+        private static void AddWood() {
+            MessageQueueManager.Instance.SendMessage(
+                new UpdateResourceMessage
+                {
+                    Type = ResourceType.Wood,
+                    Amount = 100
+                });
+        }
     }
 }
 

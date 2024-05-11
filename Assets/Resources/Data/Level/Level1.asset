@@ -23,19 +23,19 @@ MonoBehaviour:
     Coordinates: {x: 1, y: 1}
   - ItemType: 3
     Coordinates: {x: 2, y: 0}
-  - ItemType: 3
+  - ItemType: 0
     Coordinates: {x: 2, y: 1}
   - ItemType: 2
     Coordinates: {x: 0, y: 2}
   - ItemType: 1
     Coordinates: {x: 1, y: 2}
-  - ItemType: 3
+  - ItemType: 0
     Coordinates: {x: 2, y: 2}
   - ItemType: 2
     Coordinates: {x: 0, y: 3}
   - ItemType: 1
     Coordinates: {x: 1, y: 3}
-  - ItemType: 3
+  - ItemType: 0
     Coordinates: {x: 2, y: 3}
   - ItemType: 2
     Coordinates: {x: 0, y: 4}
@@ -68,6 +68,6 @@ MonoBehaviour:
   Configuration: {fileID: 11400000, guid: 1cad78adab590cf48ad384787cce85c4, type: 2}
   EnemyGroups:
   - Data: {fileID: 11400000, guid: 3145f91e1cea8c544b23688a3fbe0fd4, type: 2}
-    Position: {x: -10, y: 0, z: 0}
+    Position: {x: -20, y: 0, z: 0}
   - Data: {fileID: 11400000, guid: 437ec31aaec4e3c42823a212d3a13dd2, type: 2}
-    Position: {x: 20, y: 0, z: 10}
+    Position: {x: 30, y: 0, z: 10}

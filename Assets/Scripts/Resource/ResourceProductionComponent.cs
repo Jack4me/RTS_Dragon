@@ -30,8 +30,8 @@ namespace Resource {
                 ProduceResource();
             }
         }
-        private void ProduceResource()
-        {
+
+        private void ProduceResource() {
             UpdateResourceMessage message = new UpdateResourceMessage
             {
                 Amount = GetProducedAmount(),
@@ -39,15 +39,17 @@ namespace Resource {
             };
             MessageQueueManager.Instance.SendMessage(message);
         }
+
         private void OnResourceUpgraded(UpgradeResourceMessage message) {
             if (_type == message.Type) {
                 _productionLevel++;
             }
         }
-        private int GetProducedAmount()
-        {
+
+        private int GetProducedAmount() {
             return _productionPerSecond * _productionLevel;
         }
+
         private void OnEnable() {
             MessageQueueManager.Instance.AddListener<UpgradeResourceMessage>(OnResourceUpgraded);
         }

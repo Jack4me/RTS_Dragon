@@ -38,6 +38,8 @@ namespace Store {
 
             UpdateInventory();
             UpgradeResource();
+            UpgradeUnit();
+            SpawnUnit();
             _callback(true, null);
         }
 
