@@ -138,7 +138,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _layerMask:
     serializedVersion: 2
-    m_Bits: 2048
+    m_Bits: 6144
   _tag: Building
 --- !u!1001 &369339970828129431
 PrefabInstance:

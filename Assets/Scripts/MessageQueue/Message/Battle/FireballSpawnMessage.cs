@@ -5,6 +5,7 @@ namespace MessageQueue.Message.Battle {
         public Vector3 Position;
         public Quaternion Rotation;
         public float Damage;
+        public bool IsTower;
     }
 }
 
