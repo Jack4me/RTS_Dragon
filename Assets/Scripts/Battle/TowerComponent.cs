@@ -30,5 +30,13 @@ namespace Battle {
                 _cooldownCounter = _cooldown;
             }
         }
+
+        private void OnCollisionEnter(Collision collision) {
+            _targets.Add(collision.gameObject);
+        }
+
+        private void OnCollisionExit(Collision collision) {
+            _targets.Remove(collision.gameObject);
+        }
     }
 }
