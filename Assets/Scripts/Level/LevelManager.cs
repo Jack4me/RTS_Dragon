@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using Inventory;
+using Objective;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.SceneManagement;
@@ -11,7 +12,8 @@ namespace Level {
         private InventoryManager _inventory;
         public static LevelManager Instance { private set; get; }
         public List<GameObject> Units { private set; get; }
-
+        [SerializeField] private ObjectiveData _objectiveData;
+        
         private void Awake() {
             if (Instance != null && Instance != this) {
                 Destroy(this);  
@@ -28,6 +30,10 @@ namespace Level {
             Instantiate(_miniMapCameraPrefab);
             SceneManager.LoadScene("GameUI", LoadSceneMode.Additive);
             _fog.SetActive(true);
+        }
+        public ObjectiveData GetObjectiveData()
+        {
+            return _objectiveData;
         }
         public void AddTower(GameObject prefab)
         {
