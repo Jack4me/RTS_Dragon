@@ -45,3 +45,11 @@ MonoBehaviour:
     Image: {fileID: 21300000, guid: acf24f91ea86d2140b7efa39f2011f06, type: 3}
     Unit: 1
     IsUpgrade: 0
+  - Description: Builds a Defense Tower
+    PriceGold: 20000
+    PriceResource: 20000
+    CurrencyResource: 1
+    Prefab: {fileID: 4804087446297531907, guid: 31f98073e96447e40a466c5e3361028d, type: 3}
+    Image: {fileID: 21300000, guid: 719c2201c2f5f6c4aafffaeb5abdf5f9, type: 3}
+    Unit: 2
+    IsUpgrade: 0
