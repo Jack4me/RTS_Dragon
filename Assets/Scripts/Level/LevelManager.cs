@@ -29,7 +29,10 @@ namespace Level {
             SceneManager.LoadScene("GameUI", LoadSceneMode.Additive);
             _fog.SetActive(true);
         }
-
+        public void AddTower(GameObject prefab)
+        {
+            Instantiate(prefab);
+        }
         private void OnDestroy() {
             _inventory.Dispose();
         }

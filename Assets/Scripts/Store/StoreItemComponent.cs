@@ -61,6 +61,9 @@ namespace Store {
             else if (item.Unit == UnitType.Mage) {
                 MessageQueueManager.Instance.SendMessage(new BasicMageSpawnMessage());
             }
+            else if (item.Unit == UnitType.Tower) {
+                LevelManager.Instance.AddTower(item.Prefab);
+            }
         }
 
         private void UpgradeUnit() {
