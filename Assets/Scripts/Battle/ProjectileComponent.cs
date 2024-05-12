@@ -24,6 +24,7 @@ namespace Battle {
                 transform.rotation * Vector3.forward * _speed;
             Damage = damage;
             IsTower = isTower;
+            
         }
     }
 }

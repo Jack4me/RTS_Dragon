@@ -43,14 +43,13 @@ namespace Battle {
                 }
             }
 
-            if (collision.gameObject.TryGetComponent<ProjectileComponent>(
-                    out var projectile)) {
+            if (collision.gameObject.TryGetComponent<ProjectileComponent>(out var projectile)) {
                 collision.transform.gameObject.SetActive(false);
-                TakeDamageFromProjectile(projectile.Damage, collision.transform);
+                TakeDamageFromProjectile(projectile.Damage, collision.transform,projectile.IsTower);
             }
         }
 
-        private void TakeDamageFromProjectile(float opponentAttack, Transform target) {
+        private void TakeDamageFromProjectile(float opponentAttack, Transform target, bool isTower) {
             float damage = opponentAttack - _character.Defense;
             MessageQueueManager.Instance.SendMessage(
                 new DamageFeedbackMessage()
@@ -59,7 +58,7 @@ namespace Battle {
                     Position = _character.GetDamageFeedbackPosition()
                 });
             _character.TakeDamage(damage);
-            StopAttacking(target, false);
+            StopAttacking(target, isTower);
         }
 
         private IEnumerator TakeDamageOverTime(BaseCharacter opponent) {

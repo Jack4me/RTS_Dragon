@@ -19,6 +19,7 @@ namespace Spawner {
             fireball.SetLayerMaskToAllChildren("Unit");
             ProjectileComponent projectile = fireball.GetComponent<ProjectileComponent>();
             projectile.Setup(message.Position, message.Rotation, message.Damage, message.IsTower);
+            
         }
     }
 }
