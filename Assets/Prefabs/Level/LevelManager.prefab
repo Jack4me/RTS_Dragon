@@ -97,6 +97,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _miniMapCameraPrefab: {fileID: 2611826067981136809, guid: 64199a0b20bc0e342b55c157552126b5, type: 3}
   _fog: {fileID: 7768482292821351066, guid: 6754bd6f18b20f44da25b8e35dcc48d5, type: 3}
+  _objectiveData: {fileID: 11400000, guid: 794072dc808a26f4192af0ff978598cb, type: 2}
 --- !u!114 &62031623717535684
 MonoBehaviour:
   m_ObjectHideFlags: 0
