@@ -65,6 +65,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Spawner/BaseSpawner.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Spawner/BasicMageSpawner.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Spawner/BasicWarriorSpawner.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Spawner/Enemy/EnemyKilledMessage.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Spawner/Enemy/EnemySpawner.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Spawner/FireballSpawner.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Store/ResourceStoreData.cs" root0="FORCE_HIGHLIGHTING" />
@@ -211,7 +212,8 @@
       <workItem from="1715241022588" duration="7094000" />
       <workItem from="1715325227878" duration="4238000" />
       <workItem from="1715414298271" duration="10270000" />
-      <workItem from="1715499771857" duration="5892000" />
+      <workItem from="1715499771857" duration="5897000" />
+      <workItem from="1715600535721" duration="621000" />
     </task>
     <servers />
   </component>
