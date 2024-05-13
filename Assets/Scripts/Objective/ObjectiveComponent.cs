@@ -55,16 +55,13 @@ namespace Objective {
 
         private void UpdateObjectives() {
             StringBuilder objectives = new StringBuilder();
-            objectives.Append(
-                $"{_objectiveData.Description}{Environment.NewLine}");
+            objectives.Append($"{_objectiveData.Description}{Environment.NewLine}");
             objectives.Append(GetTimeObjectiveText(_timeCounter));
-            foreach (EnemyObjective enemy in
-                     _objectiveData.Enemies) {
+            foreach (EnemyObjective enemy in _objectiveData.Enemies) {
                 objectives.Append(GetEnemyObjectiveText(enemy));
             }
 
-            foreach (ResourceObjective resource in
-                     _objectiveData.Resources) {
+            foreach (ResourceObjective resource in _objectiveData.Resources) {
                 objectives.Append(GetResourceObjectiveText(resource));
             }
 
@@ -73,8 +70,7 @@ namespace Objective {
 
         private string GetTimeObjectiveText(float seconds) {
             if (seconds < 0) {
-                return $"<color=red>Time left:" +
-                       $" 00:00{Environment.NewLine}</color>";
+                return $"<color=red>Time left:" + $" 00:00{Environment.NewLine}</color>";
             }
 
             TimeSpan time = TimeSpan.FromSeconds(seconds);
@@ -89,21 +85,17 @@ namespace Objective {
                        $"{Environment.NewLine}</color>";
             }
 
-            return $"Kill {enemy.Type}: " +
-                   $"{counter}/{enemy.Quantity}{Environment.NewLine}";
+            return $"Kill {enemy.Type}: " + $"{counter}/{enemy.Quantity}{Environment.NewLine}";
         }
 
         private string GetResourceObjectiveText(ResourceObjective resource) {
-            _resourceCounter.TryGetValue(resource.Type,
-                out int counter);
+            _resourceCounter.TryGetValue(resource.Type, out int counter);
             if (counter >= resource.Quantity) {
                 return $"<color=green>Collect {resource.Type}: " +
                        $"{resource.Quantity}/{resource.Quantity}" +
                        $"{Environment.NewLine}</color>";
             }
-
-            return $"Collect {resource.Type}: " +
-                   $"{counter}/{resource.Quantity}{Environment.NewLine}";
+            return $"Collect {resource.Type}: " + $"{counter}/{resource.Quantity}{Environment.NewLine}";
         }
 
         private void CheckGameOver() {
