@@ -1,4 +1,7 @@
 ﻿using Character;
+using Enemy;
+using MessageQueue;
+using Spawner.Enemy;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -6,6 +9,10 @@ namespace Battle {
     public class DeadComponent : MonoBehaviour {
         private float _timeToLive = 5;
         private float _counter;
+
+        public void Start() {
+            UpdateObjective();
+        }
 
         private void Update() {
             _counter += Time.deltaTime;
@@ -15,6 +22,12 @@ namespace Battle {
                 gameObject.SetActive(false);
                 Destroy(this);
                 return;
+            }
+        }
+
+        private void UpdateObjective() {
+            if (TryGetComponent<EnemyComponent>(out var enemy)) {
+                MessageQueueManager.Instance.SendMessage(new EnemyKilledMessage { Type = enemy.Type });
             }
         }
 
