@@ -48,6 +48,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MessageQueue/Message/Enemy/RedDragonSpawnMessage.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MessageQueue/Message/UI/ActionCommandMessage.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MessageQueue/Message/UI/DamageFeedbackMessage.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MessageQueue/Message/UI/GameOverMessage.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MessageQueue/Message/UI/UpdateActionsMessage.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MessageQueue/Message/UI/UpdateDetailsMessage.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MessageQueue/Message/UI/UpdateResourceMessage.cs" root0="FORCE_HIGHLIGHTING" />
@@ -81,6 +82,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/ButtonManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/DamageFeedbackUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/DetailsUpdater.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/GameOverComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/PauseComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/ResourceUpdater.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/TimeFadeComponent.cs" root0="FORCE_HIGHLIGHTING" />
@@ -216,7 +218,7 @@
       <workItem from="1715414298271" duration="10270000" />
       <workItem from="1715499771857" duration="5897000" />
       <workItem from="1715600535721" duration="2919000" />
-      <workItem from="1715674513307" duration="2122000" />
+      <workItem from="1715674513307" duration="5288000" />
     </task>
     <servers />
   </component>

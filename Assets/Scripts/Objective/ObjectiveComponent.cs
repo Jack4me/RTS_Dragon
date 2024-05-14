@@ -95,10 +95,46 @@ namespace Objective {
                        $"{resource.Quantity}/{resource.Quantity}" +
                        $"{Environment.NewLine}</color>";
             }
+
             return $"Collect {resource.Type}: " + $"{counter}/{resource.Quantity}{Environment.NewLine}";
         }
 
         private void CheckGameOver() {
+            if (_timeCounter <= 0) {
+                MessageQueueManager.Instance.SendMessage(new GameOverMessage { PlayerWin = false });
+                return;
+            }
+
+            _playerWin = IsEnemyObjectiveCompleted();
+            if (!_playerWin) {
+                return;
+            }
+
+            _playerWin = IsResourceObjectiveCompleted();
+            if (_playerWin) {
+                MessageQueueManager.Instance.SendMessage(new GameOverMessage { PlayerWin = true });
+            }
+        }
+
+        private bool IsEnemyObjectiveCompleted() {
+            foreach (EnemyObjective enemy in _objectiveData.Enemies) {
+                _enemyCounter.TryGetValue(enemy.Type, out int counter);
+                if (counter < enemy.Quantity) {
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
+        private bool IsResourceObjectiveCompleted() {
+            foreach (ResourceObjective resource in _objectiveData.Resources) {
+                _resourceCounter.TryGetValue(resource.Type, out int counter);
+                if (counter < resource.Quantity) {
+                    return false;
+                }
+            }
+            return true;
         }
 
         private void OnEnable() {
