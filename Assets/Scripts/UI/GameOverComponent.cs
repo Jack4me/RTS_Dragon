@@ -10,10 +10,6 @@ namespace UI {
         [SerializeField] private GameObject _gameOverPopup;
         [SerializeField] private TMP_Text _gameOverText;
 
-        private void OnEnable() {
-            MessageQueueManager.Instance.AddListener<GameOverMessage>(OnGameOver);
-        }
-
         private void OnGameOver(GameOverMessage message) {
             _gameOverPopup.SetActive(true);
             if (message.PlayerWin) {
@@ -22,6 +18,10 @@ namespace UI {
             else {
                 _gameOverText.text = $"Game Over{Environment.NewLine}" + $"<color=red>You Lose</color>";
             }
+        }
+
+        private void OnEnable() {
+            MessageQueueManager.Instance.AddListener<GameOverMessage>(OnGameOver);
         }
 
         private void OnDisable() {
