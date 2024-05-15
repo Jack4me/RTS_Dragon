@@ -5,6 +5,7 @@ using UnityEngine;
 
 namespace Editor.Debug {
     public static class ResourceDebugger {
+#if UNITY_EDITOR
         [MenuItem("Dragoncraft/Debug/Resources/+10000 Gold", priority = 0)]
         private static void AddGold() {
             MessageQueueManager.Instance.SendMessage(new UpdateResourceMessage
@@ -44,4 +45,5 @@ namespace Editor.Debug {
                 });
         }
     }
+#endif
 }

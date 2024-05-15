@@ -7,6 +7,8 @@ using Level;
 using LevelConfiguration = Configuration.LevelConfigurations.Data.LevelConfiguration;
 
 namespace Editor {
+#if UNITY_EDITOR
+
     [CustomEditor(typeof(LevelData))]
     public class LevelCustomDataEditor : UnityEditor.Editor {
         public override void OnInspectorGUI() {
@@ -81,4 +83,5 @@ namespace Editor {
             }
         }
     }
+#endif
 }

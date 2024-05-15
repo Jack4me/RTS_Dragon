@@ -5,6 +5,7 @@ using UnityEngine;
 
 namespace Editor.Debug {
     public class EnemyDebugger : MonoBehaviour {
+#if UNITY_EDITOR
         [MenuItem("Dragoncraft/Debug/Enemy/Spawn Orc")]
         private static void SpawnOrc() {
             MessageQueueManager.Instance.SendMessage(new BasicOrcSpawnMessage()
@@ -29,4 +30,5 @@ namespace Editor.Debug {
             });
         }
     }
+#endif
 }

@@ -6,6 +6,7 @@ using UnityEditor;
 
 namespace Editor.Debug {
     public static class UnitDebugger {
+#if UNITY_EDITOR
         [MenuItem("Dragoncraft/Debug/Unit/Spawn Warrior %g")]
         private static void SpawnWarrior() {
             MessageQueueManager.Instance.SendMessage(new BasicWarriorSpawnMessage());
@@ -26,4 +27,5 @@ namespace Editor.Debug {
             MessageQueueManager.Instance.SendMessage(new UpgradeUnitMessage { Type = UnitType.Mage });
         }
     }
+#endif
 }
