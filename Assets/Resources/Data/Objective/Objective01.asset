@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Objective01
   m_EditorClassIdentifier: 
   Description: Defeat and Collect
-  TimeInSeconds: 900
+  TimeInSeconds: 20
   Resources:
   - Quantity: 10000
     Type: 0
