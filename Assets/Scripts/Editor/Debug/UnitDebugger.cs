@@ -24,6 +24,7 @@ namespace Editor.Debug {
 
         [MenuItem("Dragoncraft/Debug/Unit/Upgrade Mage")]
         private static void UpgradeMage() {
+           
             MessageQueueManager.Instance.SendMessage(new UpgradeUnitMessage { Type = UnitType.Mage });
         }
     }
