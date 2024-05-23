@@ -27,7 +27,6 @@ namespace Editor.Debug {
            
             MessageQueueManager.Instance.SendMessage(new UpgradeUnitMessage { Type = UnitType.Mage });
         }
-        
     }
 #endif
 }
