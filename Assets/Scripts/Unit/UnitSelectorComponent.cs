@@ -110,6 +110,7 @@ namespace Unit {
                         actions = unit.Actions;
                     }
                     SeleectedUIPortrait.Instance.ShowIUFrame(_units);
+                    UIIconsUnits.Instance.ShowUnitUIPortrait(_units);
                     Debug.Log("units" + _units);
                 }
             }

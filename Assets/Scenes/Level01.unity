@@ -131,9 +131,45 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 641926019775253246, guid: 98867cd3be0b9c649912bb74c1153257, type: 3}
+      propertyPath: m_Size.x
+      value: 3.032333
+      objectReference: {fileID: 0}
+    - target: {fileID: 641926019775253246, guid: 98867cd3be0b9c649912bb74c1153257, type: 3}
+      propertyPath: m_Size.y
+      value: 1.5415468
+      objectReference: {fileID: 0}
+    - target: {fileID: 641926019775253246, guid: 98867cd3be0b9c649912bb74c1153257, type: 3}
+      propertyPath: m_Size.z
+      value: 1.33069
+      objectReference: {fileID: 0}
+    - target: {fileID: 641926019775253246, guid: 98867cd3be0b9c649912bb74c1153257, type: 3}
+      propertyPath: m_Center.x
+      value: 1.7159971
+      objectReference: {fileID: 0}
+    - target: {fileID: 641926019775253246, guid: 98867cd3be0b9c649912bb74c1153257, type: 3}
+      propertyPath: m_Center.y
+      value: 0.6126508
+      objectReference: {fileID: 0}
+    - target: {fileID: 641926019775253246, guid: 98867cd3be0b9c649912bb74c1153257, type: 3}
+      propertyPath: m_Center.z
+      value: 0.16534524
+      objectReference: {fileID: 0}
     - target: {fileID: 1258601127846148872, guid: 98867cd3be0b9c649912bb74c1153257, type: 3}
       propertyPath: m_Name
       value: Wood
+      objectReference: {fileID: 0}
+    - target: {fileID: 4472013336790002712, guid: 98867cd3be0b9c649912bb74c1153257, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 4472013336790002712, guid: 98867cd3be0b9c649912bb74c1153257, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 4472013336790002712, guid: 98867cd3be0b9c649912bb74c1153257, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3.64
       objectReference: {fileID: 0}
     - target: {fileID: 4472013336790002712, guid: 98867cd3be0b9c649912bb74c1153257, type: 3}
       propertyPath: m_LocalPosition.x
@@ -174,6 +210,18 @@ PrefabInstance:
     - target: {fileID: 4472013336790002712, guid: 98867cd3be0b9c649912bb74c1153257, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4472013336790002712, guid: 98867cd3be0b9c649912bb74c1153257, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8388802671690305377, guid: 98867cd3be0b9c649912bb74c1153257, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.87
+      objectReference: {fileID: 0}
+    - target: {fileID: 8388802671690305377, guid: 98867cd3be0b9c649912bb74c1153257, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.57
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
