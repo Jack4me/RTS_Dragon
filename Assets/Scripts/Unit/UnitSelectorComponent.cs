@@ -3,6 +3,7 @@ using Configuration;
 using Enemy;
 using MessageQueue;
 using MessageQueue.Message.UI;
+using UI;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -71,6 +72,7 @@ namespace Unit {
                 if (_units[i] != null)
                     _units[i].MoveTo(movePosition + offset);
             }
+            
         }
 
 
@@ -107,9 +109,11 @@ namespace Unit {
                         model = collider.gameObject;
                         actions = unit.Actions;
                     }
+                    SeleectedUIPortrait.Instance.ShowIUFrame(_units);
+                    Debug.Log("units" + _units);
                 }
             }
-
+            
             MessageQueueManager.Instance.SendMessage(new UpdateDetailsMessage
             {
                 Units = _units, Model = model

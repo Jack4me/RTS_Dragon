@@ -22,8 +22,7 @@ namespace ObjectPool {
             item.SetActive(active);
             return item;
         }
-  // созадётся пул объектов, а потом в методе GetObject создаются ещё объекты
-  // зачем ? разве не из пула нужно их брать ? 
+  
   public GameObject GetObject() {
             foreach (GameObject item in _gameObjectsList) {
                 if (!item.activeInHierarchy) {
