@@ -17,20 +17,20 @@ MonoBehaviour:
     PriceGold: 100
     PriceResource: 100
     CurrencyResource: 1
-    Prefab: {fileID: 1640908652775104, guid: cd87e5026d1695148aabe96121c526ef, type: 3}
-    Image: {fileID: 21300000, guid: 2d089513ae4adfc48a683c362ad9992c, type: 3}
+    Prefab: {fileID: 100000, guid: 1bbb91c8d96cb2446a07151ce95d1f0f, type: 3}
+    Image: {fileID: 21300000, guid: 314453c76f9902b468b1c6114fd22f74, type: 3}
     Resource: 0
   - Description: 'Increases the Wood Production '
     PriceGold: 1000
     PriceResource: 1000
     CurrencyResource: 1
-    Prefab: {fileID: 1275909538635612, guid: 2767c12992d890f44b14f433fe854668, type: 3}
-    Image: {fileID: 21300000, guid: 7092324b93851a14c858530cca4a6b26, type: 3}
+    Prefab: {fileID: 1733350709616557346, guid: 4d027cd71b53a234aa91cb080bbc60c2, type: 3}
+    Image: {fileID: 21300000, guid: 6b6948ccfdadad74182ea2fda0e81f3a, type: 3}
     Resource: 1
   - Description: Increases the Food Production
     PriceGold: 10000
     PriceResource: 10000
     CurrencyResource: 1
-    Prefab: {fileID: 1232766363669618, guid: 2b519101e10d4a74580d4c86ac9e03e6, type: 3}
-    Image: {fileID: 21300000, guid: 2c04f4986ebc72e48a8b0c3eb2e42db2, type: 3}
+    Prefab: {fileID: 1206442627522542, guid: b7296d5515d23844b88668359d702859, type: 3}
+    Image: {fileID: 21300000, guid: 3ba1ad790254ffd4aaf985b44d9c4efa, type: 3}
     Resource: 2
